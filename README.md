@@ -1,2 +1,1 @@
 # vimconfigure
-Personal vim configure

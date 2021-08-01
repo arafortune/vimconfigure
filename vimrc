@@ -189,6 +189,20 @@ let g:ctrlp_max_files = ''
 " Set Ctrl-P mapping path mode
 let g:ctrlp_working_path_mode = 'ra'
 
+" git插件
+Plugin 'tpope/vim-fugitive'
+
+" Markdown 预览插件
+" 需要在vim中执行：
+" ：source %
+" :PluginInstall
+" :call mkdp#util#install()
+Plugin 'iamcco/markdown-preview.nvim'
+let g:mkdp_brower = 'chromium'
+autocmd Filetype markdown noremap <Leader>mp :MarkdownPreview<CR>
+autocmd Filetype markdown noremap <Leader>ms :MarkdownPreviewStop<CR>
+autocmd Filetype markdown noremap <Leader>mt :MarkdownPreviewToggle<CR>
+
 call vundle#end()
 
 """""""""""""""""""""""""""""General Key Shortcut"""""""""""""""""""""""""
@@ -210,6 +224,16 @@ nnoremap <Leader>kw <C-W>k
 " 跳转至下方的子窗kkj口
 nnoremap <Leader>jw <C-W>j
 " 设置跳转和返回快捷键
-nmap <Leader>e g<c-]>
-nmap <Leader>d <c-o>
+nmap <Leader>e g<C-]>
+nmap <Leader>d <C-o>
+
+" insert模式下 双击j键进入normal模式
+inoremap jj <ESC>
+
+" 切换tab窗口
+nnoremap <Leader>1 :tabn 1<CR>
+nnoremap <Leader>2 :tabn 2<CR>
+nnoremap <Leader>3 :tabn 3<CR>
+nnoremap <Leader>4 :tabn 4<CR>
+nnoremap <Leader>5 :tabn 5<CR>
 
